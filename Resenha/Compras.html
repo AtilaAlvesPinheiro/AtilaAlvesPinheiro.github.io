@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Compras - Átila Alves</title>
+    <link rel="stylesheet" href="Style.css">
+    <style>
+        /* Estilos exclusivos para Compras.html */
+        .compras-page {
+            background-color: #f5f5f5;
+        }
+
+        .shopping-item {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .shopping-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .shopping-item h3 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 8px;
+        }
+
+        .item-image-placeholder {
+            width: 100%;
+            height: 250px;
+            background-color: #e0e0e0;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: #999;
+            text-align: center;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .item-description {
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .item-link {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .item-link:hover {
+            background-color: #0056b3;
+        }
+
+        .shopping-category {
+            margin-bottom: 40px;
+        }
+
+        .shopping-category h2 {
+            font-size: 1.8em;
+            color: #333;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #007bff;
+            padding-bottom: 10px;
+        }
+
+        .items-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .items-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .shopping-item h3 {
+                font-size: 1.1em;
+            }
+
+            .item-image-placeholder {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body class="compras-page">
+    <header class="header">
+        <div class="header-content-simple">
+            <h1 id="Topo" class="title-simple">🛒 Lista de Compras</h1>
+            <p class="subtitle-simple">Um projeto simples de um site com várias coisas que quero comprar, desde jogos na Steam a coisas como livros.</p>
+        </div>
+        <ul class="header-menu">
+            <li><a href="#Livros">Livros</a></li>
+            <li><a href="#Jogos">Jogos</a></li>
+            <li><a href="Menu.html">Sobre Mim</a></li>
+            <li><a href="Projetos.html">Meus Projetos</a></li>
+            <li><a href="Biblioteca da Resenha.html">Biblioteca</a></li>
+            <li><a href="#Final">Final</a></li>
+        </ul>
+    </header>
+
+    <main class="content-area">
+        <!-- SEÇÃO DE LIVROS -->
+        <section class="shopping-category">
+            <h2 id="Livros">📚 Livros</h2>
+            <div class="items-grid">
+                <!-- Livro 1: Demian -->
+                <div class="shopping-item">
+                    <h3>Demian</h3>
+                    <img src="../Imagens/demian.jpg" alt="Capa de Demian" style="width: 100%; height: 250px; object-fit: cover; border-radius: 6px; margin-bottom: 15px;">
+                    <p class="item-description">
+                        <strong>Autor:</strong> Hermann Hesse<br>
+                        Um clássico literário que explora temas de autoconhecimento e transformação pessoal. Com certea eu não estou comprando o livro só por causa de Limbus Company...
+                    </p>
+                    <a href="https://www.amazon.com.br/Demian-Hermann-Hesse/dp/850102029X/ref=asc_df_850102029X?mcid=77e373f6f8a938ee9a75c1ad076505a9&tag=googleshopp00-20&linkCode=df0&hvadid=709856848263&hvpos=&hvnetw=g&hvrand=4723616690394516441&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=20089&hvtargid=pla-812191403231&psc=1&hvocijid=4723616690394516441-850102029X-&hvexpln=0&language=pt_BR" target="_blank" class="item-link">Ver na Amazon</a>
+                </div>
+
+                <!-- Livro 2: Ultimate Homem Aranha -->
+                <div class="shopping-item">
+                    <h3>Ultimate Homem Aranha (2024)</h3>
+                    <img src="../Imagens/Ultimate Homem Aranha.png" alt="Capa de Ultimate Homem Aranha" style="width: 100%; height: 250px; object-fit: cover; border-radius: 6px; margin-bottom: 15px;">
+                    <p class="item-description">
+                        <strong>Volumes:</strong> Série em andamento<br>
+                        A história reinventada do Homem Aranha neste universo alternativo da Marvel. ele ta casado, tem filhos e não está sendo constatemente humilhado... Né universo 616?
+                    </p>
+                    <a href="https://panini.com.br/ultimate-homem-aranha-2024-vol-1-aulha001r2?srsltid=AfmBOoq_dFU2PSFU-svcLDzVyp0Hi7H5b1wyYe-Xr__n7ATHNW3p8CI5" target="_blank" class="item-link">Ver na Panini</a>
+                </div>
+
+                <!-- Livro 3: Chainsaw Man -->
+                <div class="shopping-item">
+                    <h3>Chainsaw Man</h3>
+                    <img src="../Imagens/Chainsawman.png" alt="Capa de Chainsaw Man" style="width: 100%; height: 250px; object-fit: cover; border-radius: 6px; margin-bottom: 15px;">
+                    <p class="item-description">
+                        <strong>Autor:</strong> Tatsuki Fujimoto<br>
+                        Mangá que eu adorei o anime, li todo o mánga online após terminar o anime então me sinto na obrigação de comprar essa maravilha!
+                    </p>
+                    <a href="https://www.amazon.com.br/Chainsaw-Man-Vol-Tatsuki-Fujimoto/dp/6555127333/ref=asc_df_6555127333?mcid=00e6fa7a9e0f33faa12cc68e2a282b2c&tag=googleshopp00-20&linkCode=df0&hvadid=709857900456&hvpos=&hvnetw=g&hvrand=9187282493502869011&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=20089&hvtargid=pla-1163751362773&psc=1&hvocijid=9187282493502869011-6555127333-&hvexpln=0&language=pt_BR" target="_blank" class="item-link">Ver na Amazon</a>
+                </div>
+
+                <!-- Espaço para futuro livro -->
+                <div class="shopping-item">
+                    <h3>Futuro Livro 1</h3>
+                    <div class="item-image-placeholder">
+                        [Espaço para imagem]
+                    </div>
+                    <p class="item-description">
+                        Descrição e informações do livro a serem preenchidas em breve.
+                    </p>
+                    <a href="#" class="item-link" style="opacity: 0.5; cursor: not-allowed;">Em breve</a>
+                </div>
+
+                <!-- Espaço para futuro livro -->
+                <div class="shopping-item">
+                    <h3>Futuro Livro 2</h3>
+                    <div class="item-image-placeholder">
+                        [Espaço para imagem]
+                    </div>
+                    <p class="item-description">
+                        Descrição e informações do livro a serem preenchidas em breve.
+                    </p>
+                    <a href="#" class="item-link" style="opacity: 0.5; cursor: not-allowed;">Em breve</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO DE JOGOS -->
+        <section class="shopping-category">
+            <h2 id="Jogos">🎮 Jogos</h2>
+            <div class="items-grid">
+                <!-- Jogo 1: Mewgenics -->
+                <div class="shopping-item">
+                    <h3>Mewgenics</h3>
+                    <img src="../Imagens/Mewgenics.jpg" alt="Capa de Mewgenics" style="width: 100%; height: 250px; object-fit: cover; border-radius: 6px; margin-bottom: 15px;">
+                    <p class="item-description">
+                        <strong>Plataforma:</strong> Steam<br>
+                        Um jogo feito pela mesma mente maluca de The Binding of Isaac, que se consiste num roguelite de estrategia com gatos em que eu vou sofrer bastante com toda certeza...
+                    </p>
+                    <a href="https://store.steampowered.com/app/686060/Mewgenics/" target="_blank" class="item-link">Ver na Steam</a>
+                </div>
+
+                <!-- Jogo 2: Hades II -->
+                <div class="shopping-item">
+                    <h3>Hades II</h3>
+                    <img src="../Imagens/hades II.jpg" alt="Capa de Hades II" style="width: 100%; height: 250px; object-fit: cover; border-radius: 6px; margin-bottom: 15px;">
+                    <p class="item-description">
+                        <strong>Plataforma:</strong> Steam<br>
+                        A sequência do roguelite feito em base na mitologia grega, e que agora tem nessa sequência inda mas coisas, artes incriveís, historia incrivel... o jogo é bom...
+                    </p>
+                    <a href="https://store.steampowered.com/app/1145350/Hades_II/" target="_blank" class="item-link">Ver na Steam</a>
+                </div>
+
+                <!-- Jogo 3: Slay the Spire 2 -->
+                <div class="shopping-item">
+                    <h3>Slay the Spire 2</h3>
+                    <img src="../Imagens/slay the spire 2.png" alt="Capa de Slay the Spire 2" style="width: 100%; height: 250px; object-fit: cover; border-radius: 6px; margin-bottom: 15px;">
+                    <p class="item-description">
+                        <strong>Plataforma:</strong> Steam<br>
+                        A sequência do jogo de deck-building roguelite que mostra cada vez mas como os jogos indies superam os jogos AAA em vários aspectos... ja serei o primeiro jogo no ps4 e agora irei zerar o segundo no pc
+                    </p>
+                    <a href="https://store.steampowered.com/app/2868840/Slay_the_Spire_2/" target="_blank" class="item-link">Ver na Steam</a>
+                </div>
+
+                <!-- Espaço para futuro jogo -->
+                <div class="shopping-item">
+                    <h3>Futuro Jogo 1</h3>
+                    <div class="item-image-placeholder">
+                        [Espaço para imagem]
+                    </div>
+                    <p class="item-description">
+                        Descrição e informações do jogo a serem preenchidas em breve.
+                    </p>
+                    <a href="#" class="item-link" style="opacity: 0.5; cursor: not-allowed;">Em breve</a>
+                </div>
+
+                <!-- Espaço para futuro jogo -->
+                <div class="shopping-item">
+                    <h3>Futuro Jogo 2</h3>
+                    <div class="item-image-placeholder">
+                        [Espaço para imagem]
+                    </div>
+                    <p class="item-description">
+                        Descrição e informações do jogo a serem preenchidas em breve.
+                    </p>
+                    <a href="#" class="item-link" style="opacity: 0.5; cursor: not-allowed;">Em breve</a>
+                </div>
+
+                <!-- Espaço para futuro jogo -->
+                <div class="shopping-item">
+                    <h3>Futuro Jogo 3</h3>
+                    <div class="item-image-placeholder">
+                        [Espaço para imagem]
+                    </div>
+                    <p class="item-description">
+                        Descrição e informações do jogo a serem preenchidas em breve.
+                    </p>
+                    <a href="#" class="item-link" style="opacity: 0.5; cursor: not-allowed;">Em breve</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" id="Final">
+        <ul class="footer-links">
+            <li><a href="#Topo">Voltar ao topo</a></li>
+            <li><a href="Menu.html">Sobre Mim</a></li>
+            <li><a href="Projetos.html">Meus Projetos</a></li>
+            <li><a href="Biblioteca da Resenha.html">Biblioteca da Resenha</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
